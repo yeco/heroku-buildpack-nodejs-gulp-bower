@@ -135,6 +135,7 @@ echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\
 export PATH=/app/vendor/bundle/bin:$PATH
 echo $PATH
 
+gem install bundler
 bundle
 
 # Check and run gulp
