@@ -134,7 +134,8 @@ echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\
 
 export PATH=/app/vendor/bundle/bin:$PATH
 echo $PATH
-compass --version
+ls /app/vendor
+ls /app/vendor/bundle/bin
 
 # Check and run gulp
 (
