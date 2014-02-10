@@ -133,6 +133,8 @@ mkdir -p $build_dir/.profile.d
 echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\";" > $build_dir/.profile.d/nodejs.sh
 
 export PATH=/app/vendor/bundle/bin:$PATH
+echo $PATH
+compass --version
 
 # Check and run gulp
 (
