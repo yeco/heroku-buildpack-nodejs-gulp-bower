@@ -150,6 +150,18 @@ echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\
   fi
 )
 
+# Check and run bower
+(
+  if [ -f $build_dir/bower.json ]; then
+    # Install bower locally
+    npm install bower
+    echo "-----> Found bower.json, running bower install"
+    $build_dir/node_modules/.bin/bower install
+  else
+    echo "-----> No bower.json found"
+  fi
+)
+
 # Post package.json to nomnom service
 # Use a subshell so failures won't break the build.
 (
