@@ -84,7 +84,7 @@ fi
   # Set NODE_ENV to development to allow download dev dependencies
   status "Installing dependencies"
   # Make npm output to STDOUT instead of its default STDERR
-  npm install --userconfig $build_dir/.npmrc --development 2>&1 | indent
+  npm install --userconfig $build_dir/.npmrc --production=false 2>&1 | indent
   )
 
 # Persist goodies like node-version in the slug
