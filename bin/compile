@@ -82,13 +82,10 @@ fi
     export_env_dir $env_dir
   fi
   # Set NODE_ENV to development to allow download dev dependencies
-  export NODE_ENV=development
   status "Installing dependencies"
   # Make npm output to STDOUT instead of its default STDERR
-  npm install --userconfig $build_dir/.npmrc --production 2>&1 | indent
-  
-  export NODE_ENV=production
-)
+  npm install --userconfig $build_dir/.npmrc --development 2>&1 | indent
+  )
 
 # Persist goodies like node-version in the slug
 mkdir -p $build_dir/.heroku
